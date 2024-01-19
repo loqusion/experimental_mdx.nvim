@@ -8,12 +8,18 @@ if vim.g.loaded_mdx == 1 then
 end
 vim.g.loaded_mdx = 1
 
-local ft = "markdown.mdx"
+local filetype = "mdx"
+local treesitter_filetypes = {
+  filetype,
+  "markdown.mdx",
+}
 
 vim.filetype.add({
   extension = {
-    mdx = ft,
+    mdx = filetype,
   },
 })
 
-vim.treesitter.language.register("markdown", ft)
+for _, ft in ipairs(treesitter_filetypes) do
+  vim.treesitter.language.register("markdown", ft)
+end
