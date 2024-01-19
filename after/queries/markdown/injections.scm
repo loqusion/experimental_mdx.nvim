@@ -5,6 +5,7 @@
 ((inline) @injection.content
  (#lua-match? @injection.content "^{")
  (#lua-match? @injection.content "}$")
+ (#offset! @injection.content 0 1 0 -1)
  (#set! injection.language "javascript"))
 
 ((inline) @injection.content
