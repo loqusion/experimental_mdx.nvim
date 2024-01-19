@@ -1,4 +1,4 @@
-local ft = "mdx"
+local ft = "markdown.mdx"
 local pattern = { "*.mdx" }
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
