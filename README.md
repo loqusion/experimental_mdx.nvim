@@ -1,9 +1,5 @@
 # mdx.nvim
 
 > [!WARNING]
-> This project is not intended for general use.
-
-## Credits
-
-This plugin is heavily based on [this blog
-post](https://phelipetls.github.io/posts/mdx-syntax-highlight-treesitter-nvim/).
+> This plugin works by poisoning the global markdown injections with hacky
+> treesitter queries. I don't recommend using this.
