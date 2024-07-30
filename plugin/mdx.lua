@@ -1,5 +1,7 @@
-if not vim.version().prerelease then
-  vim.api.nvim_err_writeln("mdx.nvim is only supported for the nightly version of Neovim.")
+local supported_version = vim.version.range(">=0.10.0")
+---@diagnostic disable-next-line: invisible
+if not supported_version or not supported_version:has(vim.version()) then
+  vim.api.nvim_err_writeln("mdx.nvim is only supported for Neovim >=0.10.0.")
   return
 end
 
